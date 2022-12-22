@@ -16,7 +16,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 
 @Slf4j
 @RestController
-@RequestMapping(path = "/serviceName",
+@RequestMapping(path = "/serviceNow",
         produces = MediaType.APPLICATION_JSON_VALUE)
 public class ServiceNowController {
     private final static String RESOURCE_URL = "https://dev122899.service-now.com/api/now/table/";
