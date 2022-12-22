@@ -2,7 +2,6 @@ package com.rest.mvcexternalapi.controllers;
 
 import com.rest.mvcexternalapi.models.*;
 import lombok.extern.slf4j.Slf4j;
-import net.minidev.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.*;
@@ -11,20 +10,15 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import java.net.URI;
-import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
 
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
-import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
 @Slf4j
 @RestController
 @RequestMapping(path = "/serviceName",
         produces = MediaType.APPLICATION_JSON_VALUE)
-public class ExternalApiController {
+public class ServiceNowController {
     private final static String RESOURCE_URL = "https://dev122899.service-now.com/api/now/table/";
     private final static String SERVICENOW_USER = "admin";
     private final static String SERVICENOW_PASSWORD = "cSd@hKSD30$k";
